@@ -142,16 +142,16 @@ $(document).ready(function onDocumentReady()
 	//ui.showPlateMovementsButton.click(showHidePlateMovements);
 	//ui.showAirCurrentsButton.click(showHideAirCurrents);
 
-	ui.lowDetailButton = $("#lowDetailButton");
+	//ui.lowDetailButton = $("#lowDetailButton");
 	//ui.mediumDetailButton = $("#mediumDetailButton");
 	//ui.highDetailButton = $("#highDetailButton");
-	ui.generatePlanetButton = $("#generatePlanetButton");
+	//ui.generatePlanetButton = $("#generatePlanetButton");
 	//ui.advancedSettingsButton = $("#advancedSettingsButton");
 
 	//ui.lowDetailButton.click(setSubdivisions.bind(null, 20));
 	//ui.mediumDetailButton.click(setSubdivisions.bind(null, 40));
 	//ui.highDetailButton.click(setSubdivisions.bind(null, 60));
-	ui.generatePlanetButton.click(generatePlanetAsynchronous);
+	//ui.generatePlanetButton.click(generatePlanetAsynchronous);
 	//ui.advancedSettingsButton.click(showAdvancedSettings);
 
   //ui.dataPanel = $("#dataPanel");
@@ -212,8 +212,8 @@ $(document).ready(function onDocumentReady()
 	//ui.detailLevelRange = $("#detailLevelRange");
 	//ui.distortionLevelLabel = $("#distortionLevelLabel");
 	//ui.distortionLevelRange = $("#distortionLevelRange");
-	ui.tectonicPlateCountLabel = $("#tectonicPlateCountLabel");
-	ui.tectonicPlateCountRange = $("#tectonicPlateCountRange");
+	//ui.tectonicPlateCountLabel = $("#tectonicPlateCountLabel");
+	//ui.tectonicPlateCountRange = $("#tectonicPlateCountRange");
 	//ui.oceanicRateLabel = $("#oceanicRateLabel");
 	//ui.oceanicRateRange = $("#oceanicRateRange");
 	//ui.heatLevelLabel = $("#heatLevelLabel");
@@ -226,7 +226,7 @@ $(document).ready(function onDocumentReady()
 
 	//ui.detailLevelRange.on("input", function() { setSubdivisions(parseInt(ui.detailLevelRange.val())); });
 	//ui.distortionLevelRange.on("input", function() { setDistortionLevel(parseInt(ui.distortionLevelRange.val()) / 100); });
-	ui.tectonicPlateCountRange.on("input", function() { setPlateCount(Math.floor(Math.pow(2, parseInt(ui.tectonicPlateCountRange.val()) / 300 * (Math.log(1000) / Math.log(2) - 1) + 1))); });
+	//ui.tectonicPlateCountRange.on("input", function() { setPlateCount(Math.floor(Math.pow(2, parseInt(ui.tectonicPlateCountRange.val()) / 300 * (Math.log(1000) / Math.log(2) - 1) + 1))); });
 	//ui.oceanicRateRange.on("input", function() { setOceanicRate(parseInt(ui.oceanicRateRange.val()) / 100); });
 	//ui.heatLevelRange.on("input", function() { setHeatLevel(parseInt(ui.heatLevelRange.val()) / 100 + 1); });
 	//ui.moistureLevelRange.on("input", function() { setMoistureLevel(parseInt(ui.moistureLevelRange.val()) / 100 + 1); });
@@ -250,14 +250,16 @@ $(document).ready(function onDocumentReady()
 	showHidePlateMovements(renderPlateMovements);
 	showHideAirCurrents(renderAirCurrents);
 
-	ui.lowDetailButton.click();
+	//ui.lowDetailButton.click();
+  setSubdivisions.bind(null, 60)
 
 	//saveToFileSystem(serializePlanetMesh(planet.mesh, "function getPregeneratedPlanetMesh() { return ", "; }\n"));
 
 	window.addEventListener("resize", resizeHandler);
 	resizeHandler();
 
-	ui.generatePlanetButton.click();
+	//ui.generatePlanetButton.click();
+  generatePlanetAsynchronous()
 });
 
 function setSubdivisions(subdivisions)
@@ -265,14 +267,14 @@ function setSubdivisions(subdivisions)
 	if (typeof(subdivisions) === "number" && subdivisions >= 4)
 	{
 		generationSettings.subdivisions = subdivisions;
-		$("#detailDisplaylist>button.toggled").removeClass("toggled");
-		if (subdivisions === 20) ui.lowDetailButton.addClass("toggled");
-		else if (subdivisions === 40) ui.mediumDetailButton.addClass("toggled");
-		else if (subdivisions === 60) ui.highDetailButton.addClass("toggled");
+		//$("#detailDisplaylist>button.toggled").removeClass("toggled");
+		//if (subdivisions === 20) ui.lowDetailButton.addClass("toggled");
+		//else if (subdivisions === 40) ui.mediumDetailButton.addClass("toggled");
+		//else if (subdivisions === 60) ui.highDetailButton.addClass("toggled");
 
 		subdivisions = subdivisions.toFixed(0);
-		if (ui.detailLevelRange.val() !== subdivisions) ui.detailLevelRange.val(subdivisions);
-		ui.detailLevelLabel.text("Detail Level (" + subdivisions + ")");
+		//if (ui.detailLevelRange.val() !== subdivisions) ui.detailLevelRange.val(subdivisions);
+		//ui.detailLevelLabel.text("Detail Level (" + subdivisions + ")");
 	}
 }
 
@@ -295,9 +297,9 @@ function setPlateCount(plateCount)
 	{
 		generationSettings.plateCount = plateCount;
 
-		var sliderVal = Math.ceil((Math.log(plateCount) / Math.log(2) - 1) / (Math.log(1000) / Math.log(2) - 1) * 300).toFixed(0);
-		if (ui.tectonicPlateCountRange.val() !== sliderVal) ui.tectonicPlateCountRange.val(sliderVal);
-		ui.tectonicPlateCountLabel.text(plateCount.toFixed(0));
+		//var sliderVal = Math.ceil((Math.log(plateCount) / Math.log(2) - 1) / (Math.log(1000) / Math.log(2) - 1) * 300).toFixed(0);
+		//if (ui.tectonicPlateCountRange.val() !== sliderVal) ui.tectonicPlateCountRange.val(sliderVal);
+		//ui.tectonicPlateCountLabel.text(plateCount.toFixed(0));
 	}
 }
 
@@ -3109,7 +3111,8 @@ function renderMap()
 function resizeHandler()
 {
 	updateCamera();
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	//renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(renderer.domElement.clientWidth, renderer.domElement.clientHeight);
 }
 
 function resetCamera()
@@ -3125,7 +3128,8 @@ function resetCamera()
 
 function updateCamera()
 {
-	camera.aspect = window.innerWidth / window.innerHeight;
+	//camera.aspect = window.innerWidth / window.innerHeight;
+  camera.aspect = renderer.domElement.clientWidth / renderer.domElement.clientHeight;
 
 	var transformation = new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(cameraLatitude, cameraLongitude, 0, "YXZ"));
 	camera.position.set(0, -50, 1050);
