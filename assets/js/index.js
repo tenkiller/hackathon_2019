@@ -1,5 +1,3 @@
-//$("#form").click(function(e) { e.preventDefault(); });
-
 function saveData(){
   var heatInput = $("#heatLevel");
   localStorage.setItem("heatLevel", heatInput.val());
@@ -15,9 +13,6 @@ function saveData(){
   console.log(localStorage);
 }
 
-//$(document).ready( function() {
-//    $('.btn btn-primary btn-lg').on('click', saveData());
-//});
 $("#submitButton").click(function(){
   saveData()
 });
