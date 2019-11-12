@@ -132,3 +132,10 @@ header nav a {
     margin: 2rem 1rem;
   }
 }
+
+.footnote {
+  font-size: 0.6em;
+  font-style: italic;
+  font-variant: small-caps;
+  text-align: center;
+}
