@@ -1,9 +1,9 @@
 defmodule WebappWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :webapp
 
-  socket "/socket", WebappWeb.UserSocket,
-    websocket: true,
-    longpoll: false
+  # socket "/socket", WebappWeb.UserSocket,
+  #   websocket: true,
+  #   longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
   #
