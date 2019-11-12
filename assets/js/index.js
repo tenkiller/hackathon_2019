@@ -12,9 +12,12 @@ function saveData(){
   
   var elevationInput = $("#elevationRate");
   localStorage.setItem("elevationRate", elevationInput.val());
-  //console.log(localStorage);
+  console.log(localStorage);
 }
 
-$(document).ready( function() {
-    $('.btn btn-primary btn-lg').on('click', saveData());
+//$(document).ready( function() {
+//    $('.btn btn-primary btn-lg').on('click', saveData());
+//});
+$("#submitButton").click(function(){
+  saveData()
 });

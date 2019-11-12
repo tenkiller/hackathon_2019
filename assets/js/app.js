@@ -17,4 +17,4 @@ import "phoenix_html"
 // import socket from "./socket"
 
 import "./planet.generator"
-import saveData from "./index"
+import "./index"
