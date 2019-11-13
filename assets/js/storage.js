@@ -1,11 +1,11 @@
-const localStorage = window.localStorage
+import { STORAGE_KEY } from './constants'
 
 function setFormValues(values) {
-  localStorage.setItem('exo_travel', JSON.stringify(values))
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(values))
 }
 
 function getFormValues() {
-  return JSON.parse(localStorage.getItem('exo_travel'))
+  return JSON.parse(window.localStorage.getItem(STORAGE_KEY))
 }
 
 export {

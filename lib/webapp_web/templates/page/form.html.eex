@@ -1,33 +1,17 @@
-<html>
-    <head>
-        <title>ExoTrippin</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
-    <body>
-
-<form>
-    <table>
-        <tr>
-            <td>Enter your desired heat:</td>
-            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="heatLevel"/></td>
-        </tr>
-        <tr>
-            <td>Moisture level:</td>   
-            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="moistureLevel"/></td>
-        </tr>
-        <tr>
-            <td>Oceanic rate:</td>   
-            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="oceanicRate"/></td>
-        </tr>
-        <tr>
-            <td>Elevation:</td>   
-            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="elevationRate"/></td>
-        </tr>
-    </table>
-</form>
-        <td style="text-align: center;">
-        <button class="btn btn-primary btn-lg" id="submitButton">Submit</button>
-    </body>
-</html>
+<section>
+  <form action="">
+    <fieldset>
+      <label for="heatLevel">Temperature:</label>
+      <input type="number" id="heatLevel" value="0.7" min="0.0" max="1.0" step="0.1"/>
+      <label for="moistureLevel">Moisture level:</label>
+      <input type="number" id="moistureLevel" value="1.0" min="0.0" max="1.0" step="0.1"/>
+      <label for="oceanicRate">Oceanic rate:</label>
+      <input type="number" id="oceanicRate" value="1.0" min="0.0" max="1.0" step="0.1"/>
+    </fieldset>
+    <div class="float-right">
+      <button class="button button-outline" type="button" id="resetButton">Reset</button>
+    </div>
+    <button class="button" type="button" id="submitButton">Submit</button>
+    <div id="savedMessage" class="button button-clear" style="display: none; color: green;"><em>Saved!</em></div>
+  </form>
+</section>
