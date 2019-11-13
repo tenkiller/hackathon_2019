@@ -1,6 +1,9 @@
 // Adapted from Andy Gainey <andy@experilous.com> © 2014
 import $ from 'jquery'
 import * as THREE from './three.js'
+import { getFormValues } from './storage'
+
+const values = getFormValues()
 
 var scene = null;
 var camera = null;
@@ -34,9 +37,9 @@ var generationSettings =
 	subdivisions: 20,
 	distortionLevel: 1,
 	plateCount: 36,
-	oceanicRate: 0.7,
-	heatLevel: 1.0,
-	moistureLevel: 1.0,
+	oceanicRate: Number.parseFloat(values.oceanic) || 0.7,
+	heatLevel: Number.parseFloat(values.heat) || 1.0,
+	moistureLevel: Number.parseFloat(values.moisture) || 1.0,
 	seed: null,
 };
 
@@ -1454,7 +1457,7 @@ function populateElevationBorderQueue(boundaryCorners, boundaryCornerInnerBorder
 			var plate1 = corner.tiles[1].plate;
 			var plate2 = corner.tiles[2].plate;
 
-			elevation = 0;
+			var elevation = 0;
 
 			if (corner.pressure > 0.3)
 			{

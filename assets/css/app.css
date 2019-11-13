@@ -2,6 +2,7 @@
 
 @import "./phoenix.css";
 @import "./planet.generator.css";
+@import "./datatable.css";
 @import "./_banner.scss";
 @import "./_blog.scss";
 @import "./_button.scss";

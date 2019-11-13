@@ -16,17 +16,16 @@ import "phoenix_html"
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
 
+import "./constants"
+import "./form"
 import "./planet.generator"
-import "./index"
 import "./bootstrap-datetimepicker.min";
 import "./bootstrap-select";
 import "./bootstrap.min";
 import "./contact";
 import "./gmaps.min";
 import "./imagesloaded.pkgd.min";
-import "./index";
 import "./isotope-min";
-import "./jquery-3.2.1.min";
 import "./jquery-ui";
 import "./jquery.ajaxchimp.min";
 import "./jquery.counterup";
