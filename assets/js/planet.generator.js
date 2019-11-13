@@ -1457,7 +1457,7 @@ function populateElevationBorderQueue(boundaryCorners, boundaryCornerInnerBorder
 			var plate1 = corner.tiles[1].plate;
 			var plate2 = corner.tiles[2].plate;
 
-			elevation = 0;
+			var elevation = 0;
 
 			if (corner.pressure > 0.3)
 			{
