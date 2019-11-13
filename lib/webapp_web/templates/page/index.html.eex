@@ -1,2 +1,33 @@
-<div id="table">
-</div>
+<html>
+    <head>
+        <title>ExoTrippin</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+<form>
+    <table>
+        <tr>
+            <td>Enter your desired heat:</td>
+            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="heatLevel"/></td>
+        </tr>
+        <tr>
+            <td>Moisture level:</td>   
+            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="moistureLevel"/></td>
+        </tr>
+        <tr>
+            <td>Oceanic rate:</td>   
+            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="oceanicRate"/></td>
+        </tr>
+        <tr>
+            <td>Elevation:</td>   
+            <td style="padding-bottom: 10px;padding-top: 10px;"><input type="text" id="elevationRate"/></td>
+        </tr>
+    </table>
+</form>
+        <td style="text-align: center;">
+        <button class="btn btn-primary btn-lg" id="submitButton">Submit</button>
+    </body>
+</html>
