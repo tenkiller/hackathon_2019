@@ -1,10 +1,4 @@
-// Copyright © 2014 Andy Gainey <andy@experilous.com>
-//
-// Usage of the works is permitted provided that this instrument
-// is retained with the works, so that any entity that uses the
-// works is notified of this instrument.
-//
-// DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
+// Adapted from Andy Gainey <andy@experilous.com> © 2014
 import $ from 'jquery'
 import * as THREE from './three.js'
 
@@ -48,24 +42,6 @@ var generationSettings =
 
 var Vector3 = THREE.Vector3;
 
-var KEY_ENTER = 13;
-var KEY_SHIFT = 16;
-var KEY_ESCAPE = 27;
-var KEY_SPACE = 32;
-var KEY_LEFTARROW = 37;
-var KEY_UPARROW = 38;
-var KEY_RIGHTARROW = 39;
-var KEY_DOWNARROW = 40;
-var KEY_PAGEUP = 33;
-var KEY_PAGEDOWN = 34;
-var KEY_NUMPAD_PLUS = 107;
-var KEY_NUMPAD_MINUS = 109;
-var KEY_FORWARD_SLASH = 191;
-
-var KEY = {};
-for (var k = 0; k < 10; ++k) KEY[ String.fromCharCode(k + 48) ] = k + 48;
-for (var k = 0; k < 26; ++k) KEY[ String.fromCharCode(k + 65) ] = k + 65;
-
 $(document).ready(function onDocumentReady()
 {
 	scene = new THREE.Scene();
@@ -97,150 +73,8 @@ $(document).ready(function onDocumentReady()
 	ui.frame = $("#viewportFrame");
 	ui.rendererElement = $(renderer.domElement);
 	ui.frame.append(ui.rendererElement);
-	//ui.rendererElement.on("mousewheel", zoomHandler);
-	//ui.rendererElement.on("click", clickHandler);
-	//ui.body.on("keydown", keyDownHandler);
-	//ui.body.on("keyup", keyUpHandler);
 	ui.body.focus();
 
-	//ui.helpPanel = $("#helpPanel");
-
-	//ui.controlPanel = $("#controlPanel");
-	//ui.projectionDisplayButtons =
-	//{
-	//	globe: $("#projectGlobe"),
-	//	equalAreaMap: $("#projectEqualAreaMap"),
-	//	mercatorMap: $("#projectMercatorMap"),
-	//};
-
-	//ui.projectionDisplayButtons.globe.click(setProjectionRenderMode.bind(null, "globe"));
-	//ui.projectionDisplayButtons.equalAreaMap.click(setProjectionRenderMode.bind(null, "equalAreaMap"));
-	//ui.projectionDisplayButtons.mercatorMap.click(setProjectionRenderMode.bind(null, "mercatorMap"));
-
-	//ui.surfaceDisplayButtons =
-	//{
-	//	terrain: $("#showTerrainButton"),
-	//	plates: $("#showPlatesButton"),
-	//	elevation: $("#showElevationButton"),
-	//	temperature: $("#showTemperatureButton"),
-	//	moisture: $("#showMoistureButton"),
-	//};
-
-	//ui.surfaceDisplayButtons.terrain.click(setSurfaceRenderMode.bind(null, "terrain"));
-	//ui.surfaceDisplayButtons.plates.click(setSurfaceRenderMode.bind(null, "plates"));
-	//ui.surfaceDisplayButtons.elevation.click(setSurfaceRenderMode.bind(null, "elevation"));
-	//ui.surfaceDisplayButtons.temperature.click(setSurfaceRenderMode.bind(null, "temperature"));
-	//ui.surfaceDisplayButtons.moisture.click(setSurfaceRenderMode.bind(null, "moisture"));
-
-	//ui.showSunlightButton = $("#showSunlightButton");
-	//ui.showPlateBoundariesButton = $("#showPlateBoundariesButton");
-	//ui.showPlateMovementsButton = $("#showPlateMovementsButton");
-	//ui.showAirCurrentsButton = $("#showAirCurrentsButton");
-
-	//ui.showSunlightButton.click(showHideSunlight);
-	//ui.showPlateBoundariesButton.click(showHidePlateBoundaries);
-	//ui.showPlateMovementsButton.click(showHidePlateMovements);
-	//ui.showAirCurrentsButton.click(showHideAirCurrents);
-
-	//ui.lowDetailButton = $("#lowDetailButton");
-	//ui.mediumDetailButton = $("#mediumDetailButton");
-	//ui.highDetailButton = $("#highDetailButton");
-	//ui.generatePlanetButton = $("#generatePlanetButton");
-	//ui.advancedSettingsButton = $("#advancedSettingsButton");
-
-	//ui.lowDetailButton.click(setSubdivisions.bind(null, 20));
-	//ui.mediumDetailButton.click(setSubdivisions.bind(null, 40));
-	//ui.highDetailButton.click(setSubdivisions.bind(null, 60));
-	//ui.generatePlanetButton.click(generatePlanetAsynchronous);
-	//ui.advancedSettingsButton.click(showAdvancedSettings);
-
-  //ui.dataPanel = $("#dataPanel");
-
-	//ui.progressPanel = $("#progressPanel");
-	//ui.progressActionLabel = $("#progressActionLabel");
-	//ui.progressBarFrame = $("#progressBarFrame");
-	//ui.progressBar = $("#progressBar");
-	//ui.progressBarLabel = $("#progressBarLabel");
-	//ui.progressCancelButton = $("#progressCancelButton");
-	//ui.progressCancelButton.click(cancelButtonHandler);
-	//ui.progressPanel.hide();
-
-	//ui.tileCountLabel = $("#tileCountLabel");
-	//ui.pentagonCountLabel = $("#pentagonCountLabel");
-	//ui.hexagonCountLabel = $("#hexagonCountLabel");
-	//ui.heptagonCountLabel = $("#heptagonCountLabel");
-	//ui.plateCountLabel = $("#plateCountLabel");
-	//ui.waterPercentageLabel = $("#waterPercentageLabel");
-	//ui.rawSeedLabel = $("#rawSeedLabel");
-	//ui.originalSeedLabel = $("#originalSeedLabel");
-
-	//ui.minAirCurrentSpeedLabel = $("#minAirCurrentSpeedLabel");
-	//ui.avgAirCurrentSpeedLabel = $("#avgAirCurrentSpeedLabel");
-	//ui.maxAirCurrentSpeedLabel = $("#maxAirCurrentSpeedLabel");
-
-	//ui.minElevationLabel = $("#minElevationLabel");
-	//ui.avgElevationLabel = $("#avgElevationLabel");
-	//ui.maxElevationLabel = $("#maxElevationLabel");
-
-	//ui.minTemperatureLabel = $("#minTemperatureLabel");
-	//ui.avgTemperatureLabel = $("#avgTemperatureLabel");
-	//ui.maxTemperatureLabel = $("#maxTemperatureLabel");
-
-	//ui.minMoistureLabel = $("#minMoistureLabel");
-	//ui.avgMoistureLabel = $("#avgMoistureLabel");
-	//ui.maxMoistureLabel = $("#maxMoistureLabel");
-
-	//ui.minPlateMovementSpeedLabel = $("#minPlateMovementSpeedLabel");
-	//ui.avgPlateMovementSpeedLabel = $("#avgPlateMovementSpeedLabel");
-	//ui.maxPlateMovementSpeedLabel = $("#maxPlateMovementSpeedLabel");
-
-	//ui.minTileAreaLabel = $("#minTileAreaLabel");
-	//ui.avgTileAreaLabel = $("#avgTileAreaLabel");
-	//ui.maxTileAreaLabel = $("#maxTileAreaLabel");
-
-	//ui.minPlateAreaLabel = $("#minPlateAreaLabel");
-	//ui.avgPlateAreaLabel = $("#avgPlateAreaLabel");
-	//ui.maxPlateAreaLabel = $("#maxPlateAreaLabel");
-
-	//ui.minPlateCircumferenceLabel = $("#minPlateCircumferenceLabel");
-	//ui.avgPlateCircumferenceLabel = $("#avgPlateCircumferenceLabel");
-	//ui.maxPlateCircumferenceLabel = $("#maxPlateCircumferenceLabel");
-
-	//ui.generationSettingsPanel = $("#generationSettingsPanel");
-
-	//ui.detailLevelLabel = $("#detailLevelLabel");
-	//ui.detailLevelRange = $("#detailLevelRange");
-	//ui.distortionLevelLabel = $("#distortionLevelLabel");
-	//ui.distortionLevelRange = $("#distortionLevelRange");
-	//ui.tectonicPlateCountLabel = $("#tectonicPlateCountLabel");
-	//ui.tectonicPlateCountRange = $("#tectonicPlateCountRange");
-	//ui.oceanicRateLabel = $("#oceanicRateLabel");
-	//ui.oceanicRateRange = $("#oceanicRateRange");
-	//ui.heatLevelLabel = $("#heatLevelLabel");
-	//ui.heatLevelRange = $("#heatLevelRange");
-	//ui.moistureLevelLabel = $("#moistureLevelLabel");
-	//ui.moistureLevelRange = $("#moistureLevelRange");
-	//ui.seedTextBox = $("#seedTextBox");
-	//ui.advancedGeneratePlanetButton = $("#advancedGeneratePlanetButton");
-	//ui.advancedCancelButton = $("#advancedCancelButton");
-
-	//ui.detailLevelRange.on("input", function() { setSubdivisions(parseInt(ui.detailLevelRange.val())); });
-	//ui.distortionLevelRange.on("input", function() { setDistortionLevel(parseInt(ui.distortionLevelRange.val()) / 100); });
-	//ui.tectonicPlateCountRange.on("input", function() { setPlateCount(Math.floor(Math.pow(2, parseInt(ui.tectonicPlateCountRange.val()) / 300 * (Math.log(1000) / Math.log(2) - 1) + 1))); });
-	//ui.oceanicRateRange.on("input", function() { setOceanicRate(parseInt(ui.oceanicRateRange.val()) / 100); });
-	//ui.heatLevelRange.on("input", function() { setHeatLevel(parseInt(ui.heatLevelRange.val()) / 100 + 1); });
-	//ui.moistureLevelRange.on("input", function() { setMoistureLevel(parseInt(ui.moistureLevelRange.val()) / 100 + 1); });
-	//ui.seedTextBox.on("input", function() { setSeed(ui.seedTextBox.val()); });
-	//ui.advancedGeneratePlanetButton.click(function() { hideAdvancedSettings(); generatePlanetAsynchronous(); });
-	//ui.advancedCancelButton.click(hideAdvancedSettings);
-
-	//$("button").on("click", function(b) { $(this).blur(); });
-	//$("button").on("focus", function() { disableKeys = true; });
-	//$("input").on("focus", function() { disableKeys = true; });
-	//$("button").on("blur", function() { disableKeys = false; });
-	//$("input").on("blur", function() { disableKeys = false; });
-
-	//hideAdvancedSettings();
 	setPlateCount(50);
 
 	setProjectionRenderMode(projectionRenderMode, true);
@@ -250,15 +84,11 @@ $(document).ready(function onDocumentReady()
 	showHidePlateMovements(renderPlateMovements);
 	showHideAirCurrents(renderAirCurrents);
 
-	//ui.lowDetailButton.click();
   setSubdivisions.bind(null, 60)
-
-	//saveToFileSystem(serializePlanetMesh(planet.mesh, "function getPregeneratedPlanetMesh() { return ", "; }\n"));
 
 	window.addEventListener("resize", resizeHandler);
 	resizeHandler();
 
-	//ui.generatePlanetButton.click();
   generatePlanetAsynchronous()
 });
 
@@ -267,14 +97,7 @@ function setSubdivisions(subdivisions)
 	if (typeof(subdivisions) === "number" && subdivisions >= 4)
 	{
 		generationSettings.subdivisions = subdivisions;
-		//$("#detailDisplaylist>button.toggled").removeClass("toggled");
-		//if (subdivisions === 20) ui.lowDetailButton.addClass("toggled");
-		//else if (subdivisions === 40) ui.mediumDetailButton.addClass("toggled");
-		//else if (subdivisions === 60) ui.highDetailButton.addClass("toggled");
-
 		subdivisions = subdivisions.toFixed(0);
-		//if (ui.detailLevelRange.val() !== subdivisions) ui.detailLevelRange.val(subdivisions);
-		//ui.detailLevelLabel.text("Detail Level (" + subdivisions + ")");
 	}
 }
 
@@ -296,10 +119,6 @@ function setPlateCount(plateCount)
 	if (typeof(plateCount) === "number" && plateCount >= 0)
 	{
 		generationSettings.plateCount = plateCount;
-
-		//var sliderVal = Math.ceil((Math.log(plateCount) / Math.log(2) - 1) / (Math.log(1000) / Math.log(2) - 1) * 300).toFixed(0);
-		//if (ui.tectonicPlateCountRange.val() !== sliderVal) ui.tectonicPlateCountRange.val(sliderVal);
-		//ui.tectonicPlateCountLabel.text(plateCount.toFixed(0));
 	}
 }
 
@@ -399,11 +218,10 @@ function generatePlanetAsynchronous()
 	var moistureLevel = generationSettings.moistureLevel;
 
 	activeAction = new SteppedAction(updateProgressUI)
-		//.executeSubaction(function(action) { ui.progressPanel.show(); }, 0)
 		.executeSubaction(function(action) { generatePlanet(subdivisions, distortionRate, plateCount, oceanicRate, heatLevel, moistureLevel, random, action); }, 1, "Generating Planet")
 		.getResult(function(result) { planet = result; planet.seed = seed; planet.originalSeed = originalSeed; })
 		.executeSubaction(function(action) { displayPlanet(planet); setSeed(null); }, 0)
-		.finalize(function(action) { activeAction = null; /*ui.progressPanel.hide();*/ }, 0)
+		.finalize(function(action) { activeAction = null; }, 0)
 		.execute();
 }
 
@@ -2967,29 +2785,17 @@ var lastRenderFrameTime = null;
 
 function getZoomDelta()
 {
-	var zoomIn = (pressedKeys[KEY_NUMPAD_PLUS] || pressedKeys[KEY_PAGEUP]);
-	var zoomOut = (pressedKeys[KEY_NUMPAD_MINUS] || pressedKeys[KEY_PAGEDOWN]);
-	if (zoomIn && !zoomOut) return -1;
-	if (zoomOut && !zoomIn) return +1;
 	return 0;
 }
 
 function getLatitudeDelta()
 {
-	var up = (pressedKeys[KEY.W] || pressedKeys[KEY.Z] || pressedKeys[KEY_UPARROW]);
-	var down = (pressedKeys[KEY.S] || pressedKeys[KEY_DOWNARROW]);
-	if (up && !down) return +1;
-	if (down && !up) return -1;
 	return 0;
 }
 
 function getLongitudeDelta()
 {
-	var left = (pressedKeys[KEY.A] || pressedKeys[KEY.Q] || pressedKeys[KEY_LEFTARROW]);
-	var right = (pressedKeys[KEY.D] || pressedKeys[KEY_RIGHTARROW]);
-	if (right && !left) return +1;
-	if (left && !right) return -1;
-	return 0;
+	return +0.1;
 }
 
 function render()
@@ -3111,7 +2917,6 @@ function renderMap()
 function resizeHandler()
 {
 	updateCamera();
-	//renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setSize(renderer.domElement.clientWidth, renderer.domElement.clientHeight);
 }
 
@@ -3128,7 +2933,6 @@ function resetCamera()
 
 function updateCamera()
 {
-	//camera.aspect = window.innerWidth / window.innerHeight;
   camera.aspect = renderer.domElement.clientWidth / renderer.domElement.clientHeight;
 
 	var transformation = new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(cameraLatitude, cameraLongitude, 0, "YXZ"));
