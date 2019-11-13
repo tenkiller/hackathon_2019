@@ -1,17 +1,21 @@
 <section>
-  <form action="">
-    <fieldset>
+  <form action="" class="clearfix">
+    <fieldset class="float-left">
       <label for="heatLevel">Temperature:</label>
-      <input type="number" id="heatLevel" value="0.7" min="0.0" max="1.0" step="0.1"/>
-      <label for="moistureLevel">Moisture level:</label>
-      <input type="number" id="moistureLevel" value="1.0" min="0.0" max="1.0" step="0.1"/>
-      <label for="oceanicRate">Oceanic rate:</label>
-      <input type="number" id="oceanicRate" value="1.0" min="0.0" max="1.0" step="0.1"/>
+      <input type="range" id="heatLevel" value="0.0" min="0.0" max="1.0" step="0.1"/>
+    </fieldset>
+    <fieldset class="float-left">
+      <label for="moistureLevel">Moisture:</label>
+      <input type="range" id="moistureLevel" value="0.0" min="0.0" max="1.0" step="0.1"/>
+    </fieldset>
+    <fieldset class="float-left">
+      <label for="oceanicRate">Water:</label>
+      <input type="range" id="oceanicRate" value="0.0" min="0.0" max="1.0" step="0.1"/>
     </fieldset>
     <div class="float-right">
+      <button class="button" type="button" id="submitButton">Filter</button>
       <button class="button button-outline" type="button" id="resetButton">Reset</button>
     </div>
-    <button class="button" type="button" id="submitButton">Submit</button>
-    <div id="savedMessage" class="button button-clear" style="display: none; color: green;"><em>Saved!</em></div>
   </form>
+  <table id="dataTable"></table>
 </section>
