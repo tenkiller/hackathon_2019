@@ -41,6 +41,17 @@ module.exports = (env, options) => ({
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/i,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 65000,
+            name: '[name].[ext]'
+          }
+        }],
+        sideEffects: true
       }
     ]
   },

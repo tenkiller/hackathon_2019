@@ -5,7 +5,7 @@ import css from "../css/app.css"
 
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured
-// in "webpack.config.js".
+// in "webpack.config".
 //
 // Import dependencies
 //
@@ -18,34 +18,34 @@ import "phoenix_html"
 
 import "./planet.generator"
 import "./index"
-import "./bootstrap-datetimepicker.min.js";
-import "./bootstrap-select.js";
-import "./bootstrap.min.js";
-import "./contact.js";
-import "./gmaps.min.js";
-import "./imagesloaded.pkgd.min.js";
-import "./index.js";
-import "./isotope-min.js";
-import "./jquery-3.2.1.min.js";
-import "./jquery-ui.js";
-import "./jquery.ajaxchimp.min.js";
-import "./jquery.counterup.js";
-import "./jquery.form.js";
-import "./jquery.magnific-popup.min.js";
-import "./jquery.nice-select.js";
-import "./jquery.nice-select.min.js";
-import "./jquery.validate.min.js";
-import "./jquery.waypoints.min.js";
-import "./mail-script.js";
-import "./owl-carousel-thumb.min.js";
-import "./owl.carousel.min.js";
-import "./paragraphs.js";
-import "./planet.generator.js";
-import "./popper.js";
-import "./simpleLightbox.min.js";
-import "./stellar.js";
-import "./storage.js";
-import "./theme.js";
-import "./three.js";
-import "./timer.js";
-import "./wow.min.js";
+import "./bootstrap-datetimepicker.min";
+import "./bootstrap-select";
+import "./bootstrap.min";
+import "./contact";
+import "./gmaps.min";
+import "./imagesloaded.pkgd.min";
+import "./index";
+import "./isotope-min";
+import "./jquery-3.2.1.min";
+import "./jquery-ui";
+import "./jquery.ajaxchimp.min";
+import "./jquery.counterup";
+import "./jquery.form";
+import "./jquery.magnific-popup.min";
+import "./jquery.nice-select";
+import "./jquery.nice-select.min";
+import "./jquery.validate.min";
+import "./jquery.waypoints.min";
+import "./mail-script";
+import "./owl-carousel-thumb.min";
+import "./owl.carousel.min";
+import "./paragraphs";
+import "./planet.generator";
+import "./popper";
+import "./simpleLightbox.min";
+import "./stellar";
+import "./storage";
+import "./theme";
+import "./three";
+import "./timer";
+import "./wow.min";
