@@ -16,8 +16,7 @@ defmodule WebappWeb.Router do
   scope "/", WebappWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    get "/form", PageController, :form
+    get "/", PageController, :form
     get "/show", PageController, :show
   end
 
