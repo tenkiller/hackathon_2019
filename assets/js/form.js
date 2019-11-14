@@ -50,6 +50,7 @@ dataTable.on('click', 'tr', function () {
     heat: data[TABLE_COLUMNS.indexOf("Temp")],
     moisture: data[TABLE_COLUMNS.indexOf("Moisture")],
     oceanic: data[TABLE_COLUMNS.indexOf("Water")],
+    kelvin: data[TABLE_COLUMNS.indexOf("Kelvin")]
   }
   setFormValues(values)
   navigate()
