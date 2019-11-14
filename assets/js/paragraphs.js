@@ -11,15 +11,15 @@ var blurb1="Howdy from $planet! The oceans have turned to scorched blood and we 
 " We have everything: carbide fighting cages, chlorofluoro microtubes, and the last combination Pizza Hut-Taco Bell" +
 " in the Dreyfuss macrogalaxy. Book your flight today."
 
-var blurb2="Comrade, salutations from $planet! A smorgasbord of cabbage stew and kielbasa awaits" +
-" those travelling to the Zylinski zupragalaksi. Not a day goes by that doesn't see a salute to our" +
-" Dear Leader Boris Grutschev's eminent and august countenance which grants all life! Bow ye, before his all-giving eye."
+var blurb2="Dear Comrade, salutations from $planet! A smorgasbord of borscht and kielbasa awaits" +
+" those travelling to the Zylinski zupragalaksi. Not a day goes by that doesn't  see a salute to our" +
+" Dear Leader Boris Grutschev's eminent and august countenance––which grants all life! Bow ye, before his all-giving eye."
 
 var blurb3="Welcome to $planet, the planet full of cryogenically preserved 20th century tennis stars!" +
 " See Sampras mid-serve, Borg barrelling to the net, McEnroe throwing one of his signature tantrums." +
 " The majestic Bille Jean King stands among the rest, racket raised, poised to strike."
 
-var blurb4="Welcome to $planet, the Kyralos Galaxy's special economic zone for grotesque taxonomic projects." +
+var blurb4="Welcome to $planet, the Kyralos Galaxy's special economic zone for grotesque taxidermy projects." +
 " No proof of provenance or intergalactic hunting license necessary! All carbon-based flesh mounts 50% off. "
 " Limited time special: Glantromphian Brakexsnout stuffed and hung for a single downpayment of 25M plus 1.25M per " +
 " selenial year until the end of the Visuncular cycle. Three for the price of two!"
