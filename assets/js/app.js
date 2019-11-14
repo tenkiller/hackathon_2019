@@ -16,7 +16,11 @@ import "phoenix_html"
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
 
-import "./constants"
-import "./form"
-import "./planet.generator"
-import "./paragraphs"
+import $ from 'jquery'
+import dt from 'datatables.net'
+import * as constants from "./constants"
+import * as form from "./form"
+import * as paragraphs from "./paragraphs"
+import * as pg from "./planet.generator"
+import * as storage from "./storage"
+import * as THREE from "./three"

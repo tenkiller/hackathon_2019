@@ -9,7 +9,7 @@ defmodule Webapp.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      Webapp.Repo,
+      # Webapp.Repo,
       # Start the endpoint when the application starts
       WebappWeb.Endpoint
       # Starts a worker by calling: Webapp.Worker.start_link(arg)
