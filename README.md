@@ -1,20 +1,14 @@
-# Webapp
+# ExoTrippin
 
-To start your Phoenix server:
+> You must have Phoenix/Elixir and Node installed.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+Run the following commands:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+```
+$ mix deps.get
+$ cd assets && npm i && cd ..
+$ mix phx.server
+```
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Then open `lib/ExoTrippin/index.html` in a browser to view our splash page.
+Click on "Book a Trip" in the top right corner.

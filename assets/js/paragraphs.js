@@ -32,7 +32,7 @@ var blurbs = [blurb1, blurb2, blurb3, blurb4, blurb4, blurb5]
 
 var intro = "Welcome to {name}! We hope you enjoy your stay. It looks like the temperature today is {temp} Kelvin " +
 "and the moisture level is {moisture}. There are many fun and exciting things to experience here on this exoplanet. " +
-"About {oceanic} of our planet is covered in water, so I hope you packed your bathing suit! "
+"About {oceanic}% of our planet is covered in water, so I hope you packed your bathing suit! "
 
 function interpolate_info() {
     var name = planet_names[Math.floor(Math.random() * planet_names.length)];
